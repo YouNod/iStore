@@ -8,6 +8,7 @@ struct stud_node{
 	struct stud_node *next;
 };
 struct stud_node *Creat_Stu_Doc();
+
 struct stud_node *DeleteDoc(struct stud_node *head,int min_score);
 void Ptrint_Stu_Doc(struct stud_node *head);
 void main()
