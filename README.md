@@ -1,18 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-struct stud_node{
+struct stud_node
+{
+
 	int num;
 	char name[20];
 	int score;
 	struct stud_node *next;
 };
+
 struct stud_node *Creat_Stu_Doc();
 
 struct stud_node *DeleteDoc(struct stud_node *head,int min_score);
+
 void Ptrint_Stu_Doc(struct stud_node *head);
+
 void main()
 {
+
 	struct stud_node *head;
 	int min_score;
 
@@ -25,12 +31,12 @@ void main()
 
 struct stud_node *Creat_Stu_Doc()
 {
+
 	int num,score;
 	char name[20];
 	int size=sizeof(struct stud_node);	
-	struct stud_node *head,*tail,*pt;
-	head=tail=NULL;
-		
+	struct stud_node *head,*tail,*pt;	
+	head=tail=NULL;		
 	
 	scanf("%d",&num);
 	while(num!=0)
@@ -55,6 +61,7 @@ struct stud_node *Creat_Stu_Doc()
 
 struct stud_node *DeleteDoc(struct stud_node *head,int min_score)
 {
+
 	struct stud_node *p1,*p2;
 	while(head->score<min_score)
 	{
@@ -85,6 +92,7 @@ struct stud_node *DeleteDoc(struct stud_node *head,int min_score)
 
 void Ptrint_Stu_Doc(struct stud_node *head)
 {
+
 	struct stud_node *p;
 	if(head==NULL)return;
 	for(p=head;p;p=p->next)
